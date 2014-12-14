@@ -100,7 +100,7 @@ We refer to it using a slash character `/` on its own;
 this is the leading slash in `/users/swc`.
 
 Inside that directory are several other directories:
-`2014-07-28-stanford` (which we will be using)
+`2014-12-16-lbl-student` (which we will be using)
 `bin` (which is where some built-in programs are stored),
 `data` (for miscellaneous data files),
 `users` (where users' personal directories are located),
@@ -136,7 +136,7 @@ $ ls
 ~~~
 {:class="in"}
 ~~~
-2014-07-28-stanford    bin        data
+2014-12-16-lbl-student    bin        data
 mail                   music      notes.txt
 papers                 pizza.cfg  solar
 solar.pdf
@@ -153,7 +153,7 @@ $ ls -F
 ~~~
 {:class="in"}
 ~~~
-2014-07-28-stanford/    bin/        data/
+2014-12-16-lbl-student/    bin/        data/
 mail/                   music/      notes.txt
 papers/                 pizza.cfg   solar/
 solar.pdf
@@ -191,11 +191,11 @@ which doesn't exist.
 > cause the operating system to try to open it with a music player
 > when someone double-clicks it.
 
-Let's go inside `2014-07-28-stanford` with `cd`.
+Let's go inside `2014-12-16-lbl-student` with `cd`.
 `cd` stands for change directory.
 
 ~~~
-$ cd 2014-07-28-stanford
+$ cd 2014-12-16-lbl-student
 ~~~
 {:class="in"}
 
@@ -212,14 +212,14 @@ The leading `/` tells the computer to follow the path from the root of the files
 so it always refers to exactly one directory,
 no matter where we are when we run the command.
 
-Let's make sure we are in `2014-07-28-stanford` with `pwd`.
+Let's make sure we are in `2014-12-16-lbl-student` with `pwd`.
 
 ~~~
 $ pwd
 ~~~
 {:class="in"}
 ~~~
-/users/swc/2014-07-28-stanford
+/users/swc/2014-12-16-lbl-student
 ~~~
 {:class="out"}
 
@@ -230,7 +230,7 @@ $ ls
 ~~~
 {:class="in"}
 ~~~
-shell     slides
+shell     README.md
 ~~~
 {:class="out"}
 
@@ -242,11 +242,11 @@ $ ls -a -F
 {:class="in"}
 ~~~
 ./         ../      shell/
-slides/
+README.md
 ~~~
 {:class="out"}
 
-`-a` stands for "show all"; it forces ls to show us file and directory names that begin with `.`, such as `..` (which, if we're in `/users/swc/2014-07-28-stanford/`, refers to the `/users/swc directory`). As you can see, it also displays another special directory that's just called `.`, which means "the current working directory". It may seem redundant to have a name for it, but we'll see some uses for it soon.
+`-a` stands for "show all"; it forces ls to show us file and directory names that begin with `.`, such as `..` (which, if we're in `/users/swc/2014-12-16-lbl-student/`, refers to the `/users/swc directory`). As you can see, it also displays another special directory that's just called `.`, which means "the current working directory". It may seem redundant to have a name for it, but we'll see some uses for it soon.
 
 <img src="img/directories.png" alt="./ and .//" />
 
@@ -257,7 +257,7 @@ $ ls -F .
 ~~~
 {:class="in"}
 ~~~
-shell     slides
+shell/     README.md
 ~~~
 {:class="out"}
 
@@ -266,7 +266,7 @@ $ ls -F ..
 ~~~
 {:class="in"}
 ~~~
-2014-07-28-stanford/    bin/        data/
+2014-12-16-lbl-student/    bin/        data/
 mail/                   music/      notes.txt
 papers/                 pizza.cfg   solar/
 solar.pdf
