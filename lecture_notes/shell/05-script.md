@@ -321,7 +321,7 @@ She runs the editor and writes the following:
 for datafile in $*
 do
     echo $datafile
-    bash goostats -J 100 -r $datafile stats-$datafile
+    bash goostats -J 100 -r $datafile ../output/stats-$datafile
 done
 ~~~
 </div>
@@ -355,7 +355,7 @@ She could have written it as:
 for datafile in *[AB].txt
 do
     echo $datafile
-    bash goostats -J 100 -r $datafile stats-$datafile
+    bash goostats -J 100 -r $datafile ../outputs/stats-$datafile
 done
 ~~~
 </div>
