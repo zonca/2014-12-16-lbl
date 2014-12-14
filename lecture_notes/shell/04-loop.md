@@ -290,6 +290,13 @@ NENE02043B.txt
 ~~~
 {:class="out"}
 
+Nelle will store her output files in a new directory called outputs.
+~~~
+$ mkdir ../outputs
+~~~
+{:class="in"}
+~~~
+
 Her next step is to decide
 what to call the files that the `goostats` analysis program will create.
 Prefixing each input file's name with "stats" seems simple,
@@ -298,17 +305,17 @@ so she modifies her loop to do that:
 ~~~
 $ for datafile in *[AB].txt
 > do
->     echo $datafile stats-$datafile
+>     echo $datafile ../outputs/stats-$datafile
 > done
 ~~~
 {:class="in"}
 ~~~
-NENE01729A.txt stats-NENE01729A.txt
-NENE01729B.txt stats-NENE01729B.txt
-NENE01736A.txt stats-NENE01736A.txt
+NENE01729A.txt ../outputs/stats-NENE01729A.txt
+NENE01729B.txt ../outputs/stats-NENE01729B.txt
+NENE01736A.txt ../outputs/stats-NENE01736A.txt
 ...
-NENE02043A.txt stats-NENE02043A.txt
-NENE02043B.txt stats-NENE02043B.txt
+NENE02043A.txt ../outputs/stats-NENE02043A.txt
+NENE02043B.txt ../outputs/stats-NENE02043B.txt
 ~~~
 {:class="out"}
 
@@ -325,7 +332,7 @@ the shell redisplays the whole loop on one line
 (using semi-colons to separate the pieces):
 
 ~~~
-$ for datafile in *[AB].txt; do echo $datafile stats-$datafile; done
+$ for datafile in *[AB].txt; do echo $datafile ../outputs/stats-$datafile; done
 ~~~
 {:class="in"}
 
@@ -333,7 +340,7 @@ Using the left arrow key,
 Nelle backs up and changes the command `echo` to `goostats`:
 
 ~~~
-$ for datafile in *[AB].txt; do bash goostats $datafile stats-$datafile; done
+$ for datafile in *[AB].txt; do bash goostats $datafile ../outputs/stats-$datafile; done
 ~~~
 {:class="in"}
 
@@ -347,7 +354,7 @@ uses up-arrow to repeat the command,
 and edits it to read:
 
 ~~~
-$ for datafile in *[AB].txt; do echo $datafile; bash goostats $datafile stats-$datafile; done
+$ for datafile in *[AB].txt; do echo $datafile; bash goostats $datafile ../outputs/stats-$datafile; done
 ~~~
 {:class="in"}
 
@@ -374,7 +381,7 @@ tells her that her script will take about two hours to run.
 As a final check,
 she opens another terminal window,
 goes into `north-pacific-gyre/2012-07-03`,
-and uses `cat stats-NENE01729B.txt`
+and uses `cat ../outputs/stats-NENE01729B.txt`
 to examine one of the output files.
 It looks good,
 so she decides to get some coffee and catch up on her reading.
