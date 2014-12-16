@@ -22,6 +22,9 @@ can and should be stored in a version control system.
 3.  [Collaborating](02-collab.html)
 4.  [Conflicts](03-conflict.html)
 5.  [Open Science](04-open.html)
+6.  [Branching](05-branching.html)
+7.  [Forking](06-forking.html)
+8.  [Code Review ](07-review.html)
 
 [Reference](../ref/02-git.html)
 
