@@ -390,11 +390,11 @@ Here, for example, we can find PDB files that contain iron atoms
 by looking for the string "FE" in all the `.pdb` files below the current directory:
 
 ~~~
-$ grep FE $(find . -name '*.pdb' -print)
+$ grep A $(find . -name '*.txt' -print)
 ~~~
 {:class="in"}
 ~~~
-./human/heme.pdb:ATOM  25  FE  1  -0.924  0.535  -0.518
+./notes.txt:A file full of notes
 ~~~
 {:class="out"}
 
