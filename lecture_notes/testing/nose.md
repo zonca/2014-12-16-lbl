@@ -43,9 +43,7 @@ $  nano ranges.py
     for (low, high) in ranges:
         lowest = max(lowest, low)
         highest = min(highest, high)
-        if lowest > highest:
-            return None
-        elif lowest == highest:
+        if lowest >= highest:
             return None
         else:
             return (lowest, highest)
